@@ -1,5 +1,15 @@
 /* Colors */
-@color-a: #323232;
+@color-a: #323232; // color <a>
+@color-a-hover: #656565; // color <a> hover
+@bg-navbar: #404040; // background navbar
+@color-white: #ffffff; // white
+@color-black: #323232; // black
+@color-button: #3b8a4a; // color of button
+@color-button-hover: #32a047; // color of hover button
+
+/* Variables */
+@height_copyright_content: 32px; // height of copyright and all content
+@shadow_button: 0px 1px 3px rgba(0, 0, 0, 0.2);
 
 /* Fonts */
 @open_sans: 'Open Sans', sans-serif;
@@ -16,16 +26,24 @@
   height: @height;
 }
 // Transition
-.transition(@property: all, @value: 1s) {
-  -webkit-transition: @property @value;
-  -moz-transition: @property @value;
-  -o-transition: @property @value;
-  transition: @property @value;
+.transition(@property: all 1s) {
+  -webkit-transition: @property;
+  -moz-transition: @property;
+  -o-transition: @property;
+  transition: @property;
 }
 // Box shadow
-.shadow(@x: 0px, @y: 0px, @radius: 0px, @color: rgba(0, 0, 0, .6)) {
-  -webkit-box-shadow: @x @y @radius @color;
-  -moz-box-shadow: @x @y @radius @color;
-  -o-box-shadow: @x @y @radius @color;
-  box-shadow: @x @y @radius @color;
+.shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  -o-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+// Transform
+.transform(@property) {
+  -moz-transform: @property;
+  -ms-transform: @property;
+  -webkit-transform: @property;
+  -o-transform: @property;
+  transform: @property;
 }
