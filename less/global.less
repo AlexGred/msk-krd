@@ -1,9 +1,15 @@
-div {
-  width: 30px;
+//Variables
+@import '_variables';
 
-  a {
-    color: 20px;
-    text-decoration: none;
-    font-size: 12px;
-  }
+// Fonts
+@import '..//fonts/font-awesome/less/font-awesome.less'; // Font Awesome
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic'; // Open Sans
+
+/* Basic */
+body {
+  font-family: @open_sans;
 }
+a {
+  color: @color-a;
+}
+

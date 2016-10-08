@@ -1,0 +1,31 @@
+/* Colors */
+@color-a: #323232;
+
+/* Fonts */
+@open_sans: 'Open Sans', sans-serif;
+
+/* Responsive */
+@tablet: ~'(min-width: 768px)'; // tablet
+@desctop: ~'(min-width: 992px)'; // desctop
+@wide: ~'(min-width: 1200px)'; // desctop
+
+/* Mixins */
+// Size
+.size(@width: auto, @height: auto) {
+  width: @width;
+  height: @height;
+}
+// Transition
+.transition(@property: all, @value: 1s) {
+  -webkit-transition: @property @value;
+  -moz-transition: @property @value;
+  -o-transition: @property @value;
+  transition: @property @value;
+}
+// Box shadow
+.shadow(@x: 0px, @y: 0px, @radius: 0px, @color: rgba(0, 0, 0, .6)) {
+  -webkit-box-shadow: @x @y @radius @color;
+  -moz-box-shadow: @x @y @radius @color;
+  -o-box-shadow: @x @y @radius @color;
+  box-shadow: @x @y @radius @color;
+}
