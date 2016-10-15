@@ -21,4 +21,7 @@ $(document).ready(function() {
     slide.addClass(slideClass);
   }
 
+  // Scroll spy
+  $('body').scrollspy({ target: '.navbar-main-menu' })
+  
 });
