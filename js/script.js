@@ -22,6 +22,23 @@ $(document).ready(function() {
   }
 
   // Scroll spy
-  $('body').scrollspy({ target: '.navbar-main-menu' })
-  
+  $('body').scrollspy({ target: '.navbar-main-menu' });
+
+  // Modal
+  $('.contacts-modal-btn').click(function(event) {
+    $('#contacts-modal').modal();
+  });
+
+  // Smooth scroll for anchor
+  $('a[href^="#"]').click(function () {
+    var dest = $(this).attr("href");
+    dest = $(dest).offset().top;
+
+    console.log(dest);
+
+    $('html,body').animate({ scrollTop: dest}, 600, 'easeOutCirc');
+
+    return false;
+  });
+
 });
