@@ -2226,6 +2226,9 @@ h1.title {
   }
 }
 /* Advanced */
+.bg-grey {
+  background: #e5e5e5;
+}
 .btn-primary {
   text-align: center;
 }
@@ -2290,6 +2293,12 @@ h1.title {
     margin-bottom: 30px;
   }
 }
+.sc-hidden {
+  opacity: 0;
+}
+.sc-visible {
+  opacity: 1;
+}
 /* Navigation */
 .navbar {
   border: 0;
@@ -2346,6 +2355,11 @@ h1.title {
   overflow: hidden;
   display: table;
   padding: 20px 10px;
+  background-color: #e5e5e5 90%;
+  background: -webkit-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
+  background: -moz-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
+  background: -ms-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
+  background: -o-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
   background: linear-gradient(to left, transparent, #e5e5e5 90%, transparent);
 }
 .region-review .item-review .review-img {
@@ -2402,9 +2416,6 @@ h1.title {
   margin-top: 10px;
 }
 /* Region PDF */
-.region-pdf {
-  background: #e5e5e5;
-}
 .region-pdf .btn .btn-icon {
   font-size: 20px;
   position: relative;

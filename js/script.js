@@ -41,4 +41,15 @@ $(document).ready(function() {
     return false;
   });
 
+  // Scroll animate
+  $('.region').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInDown',
+    offset: 100    
+  });
+
+  $('.footer').viewportChecker({
+    classToAdd: 'sc-visible animated slideInUp',
+    offset: 0    
+  });             
+
 });

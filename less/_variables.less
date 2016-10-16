@@ -10,7 +10,7 @@
 /* Backgrounds */
 @bg-navbar: #404040; // background navbar
 @bg-item-review: #e5e5e5; // backgound item review
-@bg-grey: #e5e5e5 // background grey
+@bg-grey: #e5e5e5; // background grey
 
 /* Variables */
 @height_copyright_content: 32px; // height of copyright and all content
@@ -51,4 +51,13 @@
   -webkit-transform: @property;
   -o-transform: @property;
   transform: @property;
+}
+// Triple gradient
+.tripleGradient(@startColor: transparent, @midColor: #cccccc, @endColor: transparent) {
+  background-color: @midColor;
+  background: -webkit-linear-gradient(left, @startColor, @midColor, @endColor);
+  background: -moz-linear-gradient(left, @startColor, @midColor, @endColor);
+  background: -ms-linear-gradient(left, @startColor, @midColor, @endColor);
+  background: -o-linear-gradient(left, @startColor, @midColor, @endColor);
+  background: linear-gradient(to left, @startColor, @midColor, @endColor);
 }
