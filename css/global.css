@@ -2308,6 +2308,26 @@ h1.title {
   -o-transition: background 0.2s;
   transition: background 0.2s;
 }
+.navbar .phone-block {
+  float: right;
+  color: #ffffff;
+  line-height: 50px;
+  font-size: 18px;
+}
+.navbar .phone-block a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar .phone-block a i {
+  font-size: 22px;
+  top: 2px;
+  position: relative;
+  margin-right: 3px;
+}
+.navbar .navbar-main-menu {
+  float: right;
+  margin-right: 40px;
+}
 .navbar .navbar-nav li > a {
   color: #ffffff;
   padding: 5px 15px;

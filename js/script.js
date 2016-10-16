@@ -26,7 +26,7 @@ $(document).ready(function() {
 
   // Modal
   $('.contacts-modal-btn').click(function(event) {
-    $('#contacts-modal').modal();
+    $('#contacts-modal').addClass('animated').modal();
   });
 
   // Smooth scroll for anchor
