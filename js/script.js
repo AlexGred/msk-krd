@@ -34,8 +34,6 @@ $(document).ready(function() {
     var dest = $(this).attr("href");
     dest = $(dest).offset().top;
 
-    console.log(dest);
-
     $('html,body').animate({ scrollTop: dest}, 600, 'easeOutCirc');
 
     return false;
