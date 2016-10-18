@@ -2636,6 +2636,9 @@ header {
   background-size: cover;
   position: relative;
 }
+header.header > .container {
+  position: static;
+}
 header .header-content {
   position: absolute;
   top: 50%;
@@ -2649,6 +2652,7 @@ header .header-content {
   -o-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   padding: 0 50px;
+  z-index: 6;
 }
 header .header-content .page-title {
   margin-bottom: 30px;
