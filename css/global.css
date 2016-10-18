@@ -2357,6 +2357,7 @@ h1.title {
   -o-transition: background 0.2s;
   transition: background 0.2s;
   padding: 0 10px;
+  z-index: 100;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -2382,9 +2383,6 @@ h1.title {
 .navbar .navbar-main-menu {
   float: right;
   margin-right: 40px;
-}
-.navbar .navbar-nav {
-  z-index: 100;
 }
 .navbar .navbar-nav li > a {
   color: #ffffff;
