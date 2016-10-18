@@ -38,30 +38,38 @@ h1 {
   text-align: center;
 
   &:hover {
-    background: @c-button-hover;
+    background: @bg-button-hover;
   }
 
   &:active,
   &:focus,
   &:active:focus {
-    background: @c-button-hover;
+    background: @bg-button-hover;
     border: 0;
+    color: @c-btn-text;
+    outline: 0;
   }
 }
 .btn {
   border: 0;
+  outline: 0;
   font-size: 16px;
-  text-transform: uppercase;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: @c-button;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: @bg-button;
   .shadow(@shadow_button);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+  color: @c-btn-text;
 
   &:active:focus {
     outline: 0;
     .shadow(none);
+  }
+
+  &:hover {
+    background: @bg-button-hover;
+    color: @c-btn-text;
   }
 }
 .form-control {
@@ -85,7 +93,7 @@ h1 {
   margin-bottom: 40px;
 
   @media @tablet {
-    font-size: 50px;
+    font-size: 46px;
     margin-bottom: 30px;
   }
 }
@@ -95,12 +103,40 @@ h1 {
 .sc-visible {
   opacity: 1;
 }
+.region-description {
+  font-size: 20px;
+  font-weight: 100;
+  .size(84%);
+  margin: 0 auto 40px;
+  text-align: center;
+
+  &.description-underline {
+    padding-bottom: 30px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 0;
+      left: 50%;
+      .transform(translateX(-50%));
+      .size(160px, 2px);
+      background: @bg-desc-line;
+    }
+  }
+}
 
 /* Navigation */
 .navbar {
   border: 0;
   background: none;
   .transition(background .2s);
+  padding: 0 10px;
+
+  @media @tablet {
+    padding: 0 40px;
+  }
 
   .phone-block { // Block phone
     float: right;
@@ -177,7 +213,27 @@ h1 {
 
   &.affix {
     background: @bg-navbar;
-    padding: 5px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+/* Region services */
+.region-services {
+  
+  .item-services {
+    margin-bottom: 40px;
+
+    .item-icon {
+      color: @c-icon;
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    .item-description {
+      font-size: 16px;
+      font-weight: 100;
+    }
   }
 }
 
@@ -188,7 +244,12 @@ h1 {
     overflow: hidden;
     display: table;
     padding: 20px 10px;
+    margin-bottom: 10px;
     .tripleGradient(transparent, @bg-item-review 90%, transparent);
+
+    @media @tablet {
+      margin-bottom: 0;
+    }
 
     .review-img {
       .size(30%);
@@ -235,16 +296,11 @@ h1 {
       margin-bottom: 10px;
 
       @media @tablet {
-        font-size: 50px;
+        font-size: 46px;
         margin-bottom: 10px;
       }
     }
 
-    .form-description {
-      font-size: 20px;
-      font-weight: 100;
-      margin-bottom: 40px;
-    }
     .btn-primary {
       margin-top: 10px;
     }
@@ -254,7 +310,22 @@ h1 {
 /* Region PDF */
 .region-pdf {
 
-  .btn {
+  .pdf-title {
+    font-size: 30px;
+
+    @media @tablet {
+      font-size: 34px;
+    }
+  }
+
+  .download-link {
+    font-size: 20px;
+    color: @c-icon;
+    cursor: pointer;
+
+    &:hover {
+      color: @c-a;
+    }
 
     .btn-icon {
       font-size: 20px;
@@ -314,6 +385,13 @@ header {
   background-size: cover;
   position: relative;
 
+  .bg-video {
+    background: @bg-video;
+    .size(100%, 100%);
+    position: absolute;
+    z-index: 5;
+  }
+
   .header-content {
     position: absolute;
     top: 50%;
@@ -322,6 +400,7 @@ header {
     max-width: 1000px;
     .transform(translateY(-50%) translateX(-50%));
     padding: 0 50px;
+    z-index: 6;
 
     .page-title {
       margin-bottom: 30px;

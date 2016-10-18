@@ -3,14 +3,18 @@
 @c-a-hover: #656565; // color <a> hover
 @c-white: #ffffff; // white
 @c-black: #323232; // black
-@c-button: #3b8a4a; // color of button
-@c-button-hover: #32a047; // color of hover button
 @c-form: #ffffff; // color of form
+@c-btn-text: #212121; // color of btn text
+@c-icon: #82533b;
 
 /* Backgrounds */
 @bg-navbar: #404040; // background navbar
 @bg-item-review: #e5e5e5; // backgound item review
 @bg-grey: #e5e5e5; // background grey
+@bg-button: #ffee58; // bg of button
+@bg-button-hover: #ffd83b; // bg of hover button
+@bg-video: rgba(0, 0, 0, 0.25);
+@bg-desc-line: #bfbfbf;
 
 /* Variables */
 @height_copyright_content: 32px; // height of copyright and all content
@@ -54,7 +58,6 @@
 }
 // Triple gradient
 .tripleGradient(@startColor: transparent, @midColor: #cccccc, @endColor: transparent) {
-  background-color: @midColor;
   background: -webkit-linear-gradient(left, @startColor, @midColor, @endColor);
   background: -moz-linear-gradient(left, @startColor, @midColor, @endColor);
   background: -ms-linear-gradient(left, @startColor, @midColor, @endColor);

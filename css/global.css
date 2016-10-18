@@ -2233,27 +2233,30 @@ h1.title {
   text-align: center;
 }
 .btn-primary:hover {
-  background: #32a047;
+  background: #ffd83b;
 }
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:active:focus {
-  background: #32a047;
+  background: #ffd83b;
   border: 0;
+  color: #212121;
+  outline: 0;
 }
 .btn {
   border: 0;
+  outline: 0;
   font-size: 16px;
-  text-transform: uppercase;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: #3b8a4a;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #ffee58;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #212121;
 }
 .btn:active:focus {
   outline: 0;
@@ -2261,6 +2264,10 @@ h1.title {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
+}
+.btn:hover {
+  background: #ffd83b;
+  color: #212121;
 }
 .form-control {
   height: 40px;
@@ -2289,7 +2296,7 @@ h1.title {
 }
 @media (min-width: 768px) {
   .region-title {
-    font-size: 50px;
+    font-size: 46px;
     margin-bottom: 30px;
   }
 }
@@ -2299,6 +2306,33 @@ h1.title {
 .sc-visible {
   opacity: 1;
 }
+.region-description {
+  font-size: 20px;
+  font-weight: 100;
+  width: 84%;
+  height: auto;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.region-description.description-underline {
+  padding-bottom: 30px;
+  position: relative;
+}
+.region-description.description-underline:before {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: 0;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 160px;
+  height: 2px;
+  background: #bfbfbf;
+}
 /* Navigation */
 .navbar {
   border: 0;
@@ -2307,6 +2341,12 @@ h1.title {
   -moz-transition: background 0.2s;
   -o-transition: background 0.2s;
   transition: background 0.2s;
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0 40px;
+  }
 }
 .navbar .phone-block {
   float: right;
@@ -2368,19 +2408,38 @@ h1.title {
 }
 .navbar.affix {
   background: #404040;
-  padding: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* Region services */
+.region-services .item-services {
+  margin-bottom: 40px;
+}
+.region-services .item-services .item-icon {
+  color: #82533b;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+.region-services .item-services .item-description {
+  font-size: 16px;
+  font-weight: 100;
 }
 /* Region review */
 .region-review .item-review {
   overflow: hidden;
   display: table;
   padding: 20px 10px;
-  background-color: #e5e5e5 90%;
+  margin-bottom: 10px;
   background: -webkit-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
   background: -moz-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
   background: -ms-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
   background: -o-linear-gradient(left, transparent, #e5e5e5 90%, transparent);
   background: linear-gradient(to left, transparent, #e5e5e5 90%, transparent);
+}
+@media (min-width: 768px) {
+  .region-review .item-review {
+    margin-bottom: 0;
+  }
 }
 .region-review .item-review .review-img {
   width: 30%;
@@ -2423,20 +2482,31 @@ h1.title {
 }
 @media (min-width: 768px) {
   .region-form .form-contacts .form-title {
-    font-size: 50px;
+    font-size: 46px;
     margin-bottom: 10px;
   }
-}
-.region-form .form-contacts .form-description {
-  font-size: 20px;
-  font-weight: 100;
-  margin-bottom: 40px;
 }
 .region-form .form-contacts .btn-primary {
   margin-top: 10px;
 }
 /* Region PDF */
-.region-pdf .btn .btn-icon {
+.region-pdf .pdf-title {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .region-pdf .pdf-title {
+    font-size: 34px;
+  }
+}
+.region-pdf .download-link {
+  font-size: 20px;
+  color: #82533b;
+  cursor: pointer;
+}
+.region-pdf .download-link:hover {
+  color: #323232;
+}
+.region-pdf .download-link .btn-icon {
   font-size: 20px;
   position: relative;
   left: 8px;
@@ -2491,6 +2561,13 @@ header {
   background-size: cover;
   position: relative;
 }
+header .bg-video {
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
 header .header-content {
   position: absolute;
   top: 50%;
@@ -2504,6 +2581,7 @@ header .header-content {
   -o-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   padding: 0 50px;
+  z-index: 6;
 }
 header .header-content .page-title {
   margin-bottom: 30px;
