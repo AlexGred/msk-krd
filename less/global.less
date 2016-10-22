@@ -3,6 +3,7 @@
 
 // Fonts
 @import '../fonts/font-awesome/less/font-awesome.less'; // Font Awesome
+@import '../js/slick/slick.less'; // Font Awesome
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic'; // Open Sans
 
 /* Basic */
@@ -513,6 +514,28 @@ header {
       color: @c-white;
       font-size: 24px;
       line-height: 1;
+    }
+  }
+}
+
+/* Region gallery */
+.region-gallery {
+
+  .gallery-wrapper {
+
+    .gallery-item {
+      text-align: center;
+      outline: 0;
+
+      .gallery-title {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .gallery-description {
+        .size(80%);
+        margin: auto;
+      }
     }
   }
 }

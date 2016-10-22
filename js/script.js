@@ -51,4 +51,11 @@ $(document).ready(function() {
     offset: 0    
   }); 
 
+  /* Gallery */
+  $('.gallery-wrapper').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
 });
