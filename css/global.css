@@ -2227,8 +2227,17 @@ h1.title {
   }
 }
 /* Advanced */
+.flex {
+  display: flex;
+}
 .bg-grey {
+  background: #f3f3f3;
+}
+.bg-dark-grey {
   background: #e5e5e5;
+}
+.bg-light-grey {
+  background: #f8f8f8;
 }
 .btn-primary {
   text-align: center;
@@ -2522,37 +2531,35 @@ h1.title {
 /* Region advantages */
 .region-advantages {
   padding-bottom: 0;
+  overflow: hidden;
 }
 .region-advantages .item-advantages {
-  padding: 40px 0;
-  border-top: 1px solid #e5e5e5;
+  padding: 60px 0;
   text-align: left;
+  width: 100%;
+  height: 310px;
 }
-.region-advantages .item-advantages.right {
-  text-align: right;
+.region-advantages .item-advantages.left .item-wrapper {
+  float: right;
 }
-.region-advantages .item-advantages.right .item-text {
-  padding-right: 30px;
+.region-advantages .item-advantages.right .item-wrapper {
+  float: left;
 }
 .region-advantages .item-advantages .item-wrapper {
-  display: table;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: auto;
-  float: none;
+  text-align: center;
 }
 .region-advantages .item-advantages .item-wrapper .item-icon {
   font-size: 80px;
   color: #82533b;
-  display: table-cell;
-  width: 200px;
-  height: auto;
   text-align: center;
 }
 .region-advantages .item-advantages .item-wrapper .item-text {
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 30px;
+  width: 350px;
+  margin: auto;
+  line-height: 1.2;
 }
 .region-advantages .item-advantages .item-wrapper .item-text .item-title {
   font-weight: 500;
@@ -2561,9 +2568,6 @@ h1.title {
 .region-advantages .item-advantages .item-wrapper .item-text .item-description {
   font-size: 16px;
   font-weight: 100;
-}
-.region-advantages .item-advantages.last {
-  border-bottom: 1px solid #e5e5e5;
 }
 /* Region PDF */
 .region-pdf .pdf-title {
@@ -2574,15 +2578,10 @@ h1.title {
     font-size: 34px;
   }
 }
-.region-pdf .download-link {
-  font-size: 20px;
-  color: #82533b;
+.region-pdf .btn {
   cursor: pointer;
 }
-.region-pdf .download-link:hover {
-  color: #323232;
-}
-.region-pdf .download-link .btn-icon {
+.region-pdf .btn .btn-icon {
   font-size: 20px;
   position: relative;
   left: 8px;
@@ -2657,5 +2656,10 @@ header .header-content {
 }
 header .header-content .page-title {
   margin-bottom: 30px;
+}
+header .header-content .video-descrition {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
 }
 /*# sourceMappingURL=global.css.map */

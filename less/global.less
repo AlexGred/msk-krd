@@ -31,8 +31,17 @@ h1 {
 }
 
 /* Advanced */
+.flex {
+  display: flex;
+}
 .bg-grey {
   background: @bg-grey;
+}
+.bg-dark-grey {
+  background: darken(@bg-grey, 5.5%);
+}
+.bg-light-grey {
+  background: lighten(@bg-grey, 2%);
 }
 .btn-primary {
   text-align: center;
@@ -340,38 +349,42 @@ h1 {
 /* Region advantages */
 .region-advantages {
   padding-bottom: 0;
+  overflow: hidden;
 
   .item-advantages {
-    padding: 40px 0;
-    border-top: 1px solid @c-border;
+    padding: 60px 0;
     text-align: left;
+    .size(100%, 310px);
+
+    &.left {
+
+      .item-wrapper {
+        float: right;
+      }
+    }
 
     &.right {
-      text-align: right;
 
-      .item-text {
-        padding-right: 30px;
+      .item-wrapper {
+        float: left;
       }
     }
 
     .item-wrapper {
-      display: table;
-      .size(80%);
+      .size(90%);
       margin: auto;
-      float: none;
+      text-align: center;
 
       .item-icon {
         font-size: 80px;
         color: @c-icon;
-        display: table-cell;
-        .size(200px);
         text-align: center;
       }
 
       .item-text {
-        display: table-cell;
-        vertical-align: middle;
-        padding-left: 30px;
+        width: 350px;
+        margin: auto;
+        line-height: 1.2;
 
         .item-title {
           font-weight: 500;
@@ -383,10 +396,6 @@ h1 {
           font-weight: 100;
         }
       }
-    }
-
-    &.last {
-      border-bottom: 1px solid @c-border;
     }
   }
 }
@@ -402,14 +411,8 @@ h1 {
     }
   }
 
-  .download-link {
-    font-size: 20px;
-    color: @c-icon;
+  .btn {
     cursor: pointer;
-
-    &:hover {
-      color: @c-a;
-    }
 
     .btn-icon {
       font-size: 20px;
@@ -485,6 +488,12 @@ header {
 
     .page-title {
       margin-bottom: 30px;
+    }
+
+    .video-descrition {
+      color: @c-white;
+      font-size: 24px;
+      line-height: 1;
     }
   }
 }
