@@ -34,6 +34,9 @@ h1 {
 .flex {
   display: flex;
 }
+.text-shadow {
+  text-shadow: @shadow_text;
+}
 .bg-grey {
   background: @bg-grey;
 }
@@ -323,7 +326,23 @@ h1 {
   background-size: cover;
 
   .text-field {
-   color: @c-form;
+    color: @c-form;
+
+    .contacts-info {
+      margin-bottom: 30px;
+      font-size: 22px;
+
+      a {
+        color: @c-form;
+        text-decoration: none;
+        text-shadow: @shadow_text;
+      }
+    }
+
+    .form-description {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
   }
 
   .form-contacts {

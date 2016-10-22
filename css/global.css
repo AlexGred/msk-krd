@@ -2230,6 +2230,9 @@ h1.title {
 .flex {
   display: flex;
 }
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
 .bg-grey {
   background: #f3f3f3;
 }
@@ -2510,6 +2513,19 @@ h1.title {
 }
 .region-contacts .text-field {
   color: #ffffff;
+}
+.region-contacts .text-field .contacts-info {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+.region-contacts .text-field .contacts-info a {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.region-contacts .text-field .form-description {
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 .region-contacts .form-contacts {
   max-width: 500px;

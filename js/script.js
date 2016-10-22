@@ -27,6 +27,7 @@ $(document).ready(function() {
   // Modal
   $('.contacts-modal-btn').click(function(event) {
     $('#contacts-modal').addClass('animated').modal();
+    $('.modal-backdrop').addClass('animated slideInDown');
   });
 
   // Smooth scroll for anchor
@@ -48,6 +49,6 @@ $(document).ready(function() {
   $('.footer').viewportChecker({
     classToAdd: 'sc-visible animated slideInUp',
     offset: 0    
-  });             
+  }); 
 
 });
