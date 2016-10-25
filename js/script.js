@@ -9,6 +9,7 @@ $(document).ready(function() {
 
   // Phone mask
   $('#phone-number').mask('+7 (999) 999-99-99');
+  $('#phone-number-1').mask('+7 (999) 999-99-99');
 
   // Slide contacts form
   var slide = $('#slide-contact-form');
@@ -27,7 +28,7 @@ $(document).ready(function() {
   // Modal
   $('.contacts-modal-btn').click(function(event) {
     $('#contacts-modal').addClass('animated').modal();
-    $('.modal-backdrop').addClass('animated slideInDown');
+    $('.modal-backdrop').addClass('animated fadeInModal');
   });
 
   // Smooth scroll for anchor

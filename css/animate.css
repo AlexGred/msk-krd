@@ -1215,6 +1215,31 @@
   animation-name: bounceOutUp;
 }
 
+@-webkit-keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+  }
+}
+
+.fadeInModal {
+  -webkit-animation-name: fadeInModal;
+  animation-name: fadeInModal;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

@@ -557,3 +557,52 @@ header {
     }
   }
 }
+
+/* Modal form*/
+.modal {
+
+  &.in .modal-dialog {
+    .transform(translate(0, -50%));
+      margin-top: 50vh;
+  }
+
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    background: darken(@bg-grey, 7%);
+
+    .modal-body {
+      padding: 30px;
+
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        line-height: 1;
+        font-size: 50px;
+        font-weight: 100;
+      }
+
+      .form-contacts {
+
+        .form-control {
+          border-radius: 0;
+          .shadow(none);
+
+          &:focus {
+            border: 0;
+            .shadow(@shadow_button);
+          }
+        }
+
+        .form-description {
+          margin-bottom: 30px;
+        }
+      }
+
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+}

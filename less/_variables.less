@@ -73,3 +73,11 @@
   background: -o-linear-gradient(left, @startColor, @midColor, @endColor);
   background: linear-gradient(to left, @startColor, @midColor, @endColor);
 }
+// Blur
+.blur(@radius: 5px) {
+  -webkit-filter: blur(@radius);
+  -moz-filter: blur(@radius);
+  -o-filter: blur(@radius);
+  -ms-filter: blur(@radius);
+  filter: blur(@radius);
+}
