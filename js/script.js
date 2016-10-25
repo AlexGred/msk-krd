@@ -59,4 +59,6 @@ $(document).ready(function() {
     slidesToScroll: 3
   });
 
+  $('a.cbox-item').colorbox();
+
 });

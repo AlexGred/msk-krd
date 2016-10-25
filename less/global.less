@@ -154,6 +154,31 @@ h1 {
   }
 }
 
+/* Colorbox */
+#cboxOverlay {
+  background: @bg-black;
+}
+#colorbox {
+
+  #cboxContent {
+    overflow: visible;
+    background: none;
+    padding: 30px;
+    box-sizing: content-box;
+
+    #cboxLoadedContent {
+      margin: 0;
+    }
+
+    #cboxClose {
+      top: 0px;
+      right: 0px;
+      background: @url-x-angle no-repeat center center;
+    }
+  }
+}
+
+
 /* Navigation */
 .navbar {
   border: 0;

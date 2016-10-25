@@ -2446,6 +2446,24 @@ h1.title {
   position: relative;
   z-index: 6;
 }
+/* Colorbox */
+#cboxOverlay {
+  background: #000000;
+}
+#colorbox #cboxContent {
+  overflow: visible;
+  background: none;
+  padding: 30px;
+  box-sizing: content-box;
+}
+#colorbox #cboxContent #cboxLoadedContent {
+  margin: 0;
+}
+#colorbox #cboxContent #cboxClose {
+  top: 0px;
+  right: 0px;
+  background: url('../img/x-angle.png') no-repeat center center;
+}
 /* Navigation */
 .navbar {
   border: 0;
