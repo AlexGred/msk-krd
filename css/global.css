@@ -2514,16 +2514,36 @@ h1.title {
 .navbar .navbar-nav li.active a:focus {
   background: #ffffff;
 }
+.navbar .navbar-brand {
+  margin: 5px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+}
 .navbar.affix-top {
   background: none;
   position: absolute;
   top: 0;
   padding-top: 25px;
 }
+.navbar.affix-top .navbar-brand {
+  background: url('/img/logo.png') no-repeat center center;
+  width: 240px;
+  height: 100px;
+  background-size: contain;
+}
 .navbar.affix {
   background: #404040;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+.navbar.affix .navbar-brand {
+  background: url('/img/logo-mini.png') no-repeat center center;
+  width: 96px;
+  height: 40px;
+  background-size: contain;
 }
 /* Region services */
 .region-services .item-services {
