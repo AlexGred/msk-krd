@@ -12,6 +12,7 @@ body {
 }
 a {
   color: @c-a;
+  outline: 0;
 
   &:hover {
     color: @c-a;
@@ -29,6 +30,14 @@ h1 {
       font-size: 50px;
     }
   }
+}
+img {
+  outline: 0;
+  max-width: 100%;
+  .size();
+}
+button {
+  outline: 0;
 }
 
 /* Advanced */
@@ -566,9 +575,36 @@ header {
 
   .gallery-wrapper {
 
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      .transform(translate(-50%));
+      margin-top: -50px;
+      background: @bg-grey;
+      border: 0;
+      text-indent: -999em;
+    }
+
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      .transform(translate(-50%));
+      margin-top: -50px;
+      background: @bg-grey;
+      border: 0;
+      text-indent: -999em;
+    }
+
     .gallery-item {
       text-align: center;
       outline: 0;
+
+      .gallery-img {
+        .size(85%);
+        margin: auto;
+      }
 
       .gallery-title {
         margin-top: 20px;
@@ -611,11 +647,17 @@ header {
       .form-contacts {
 
         .form-control {
-          border-radius: 0;
+          border-radius: 3px;
+          border: 1px solid transparent;
           .shadow(none);
+          .transition(border-color .3s);
+
+          &:hover {
+            border-color: @c-icon;
+          }
 
           &:focus {
-            border: 0;
+            border-color: @c-icon;
             .shadow(@shadow_button);
           }
         }
