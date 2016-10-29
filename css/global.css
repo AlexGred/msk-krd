@@ -2628,7 +2628,7 @@ button {
 }
 /* Region form */
 .region-form {
-  background: url('../img/bg-form.jpg') no-repeat center center;
+  background: url('../img/bg-form.jpg') no-repeat center bottom;
   background-size: cover;
 }
 .region-form .form-title {

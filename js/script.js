@@ -61,4 +61,8 @@ $(document).ready(function() {
 
   $('a.cbox-item').colorbox();
 
+  /* Parallax */
+  $('.region-form').parallax('50%', 0.1);
+
+
 });
