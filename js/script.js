@@ -29,15 +29,17 @@ $(document).ready(function() {
     }
   });
     
-
-
-
   // Scroll spy
   $('body').scrollspy({ target: '.navbar-main-menu' });
 
-  // Modal
+  /* Modal */
   $('.contacts-modal-btn').click(function(event) {
     $('#contacts-modal').addClass('animated').modal();
+    $('.modal-backdrop').addClass('animated fadeInModal');
+  });
+
+  $('.meet-modal-btn').click(function(event) {
+    $('#meet-modal').addClass('animated').modal();
     $('.modal-backdrop').addClass('animated fadeInModal');
   });
 
