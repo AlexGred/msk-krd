@@ -2797,7 +2797,7 @@ header.header > .container {
 }
 header .arrow-down {
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   left: 50%;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2807,14 +2807,14 @@ header .arrow-down {
   color: #ffffff;
   z-index: 30;
   cursor: pointer;
-  font-size: 34px;
+  font-size: 20px;
   display: inline-block;
-  line-height: 50px;
-  width: 36px;
-  height: 50px;
+  line-height: 37px;
+  width: 26px;
+  height: 39px;
   text-align: center;
   border: 1px solid #ffffff;
-  border-radius: 30%;
+  border-radius: 20px;
 }
 header .header-content {
   position: absolute;
@@ -3033,5 +3033,11 @@ header .header-content .video-descrition {
 }
 .modal .modal-content .modal-body .btn {
   margin-top: 30px;
+}
+/* Region mistake */
+.region-mistake .mistake-wrapper {
+  width: 70%;
+  height: auto;
+  margin: auto;
 }
 /*# sourceMappingURL=global.css.map */

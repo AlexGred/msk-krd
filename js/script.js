@@ -107,15 +107,11 @@ $(document).ready(function() {
     offset: 0   
   }); 
 
-  $('.header-content').viewportChecker({
-    classToAdd: 'sc-visible animated fadeIn',
-    offset: 0   
-  }); 
+  $('.header-content').addClass('sc-visible animated fadeIn'); 
 
-  $('.navbar').viewportChecker({
-    classToAdd: 'sc-visible animated slideInDown',
-    offset: 0   
-  }); 
+  $('.navbar').addClass('sc-visible animated slideInDown'); 
+
+  $('.arrow-down').addClass('sc-visible animated fadeInUpBtn');
 
   /* Gallery */
   $('.gallery-wrapper').slick({
