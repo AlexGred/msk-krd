@@ -54,7 +54,7 @@ $(document).ready(function() {
   });
 
   // Scroll animate
-  $('.region-title').viewportChecker({
+  $('.region .region-title').viewportChecker({
     classToAdd: 'sc-visible animated fadeInDown',
     offset: 100    
   });
@@ -119,7 +119,9 @@ $(document).ready(function() {
   $('.gallery-wrapper').slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 15000
   });
 
   $('a.cbox-item').colorbox();

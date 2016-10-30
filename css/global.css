@@ -2450,7 +2450,7 @@ button {
   background: #bfbfbf;
 }
 .background-shade {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2837,8 +2837,9 @@ header .header-content .page-title {
 }
 header .header-content .video-descrition {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
+  font-weight: 500;
 }
 /* Region gallery */
 @media (min-width: 768px) {
@@ -3007,6 +3008,10 @@ header .header-content .video-descrition {
   font-size: 50px;
   font-weight: 100;
 }
+.modal .modal-content .modal-body .form-contacts .form-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 .modal .modal-content .modal-body .form-contacts .form-control {
   border-radius: 3px;
   border: 1px solid transparent;
@@ -3030,6 +3035,7 @@ header .header-content .video-descrition {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .modal .modal-content .modal-body .form-contacts .form-description {
+  font-size: 18px;
   margin-bottom: 30px;
 }
 .modal .modal-content .modal-body .btn {
