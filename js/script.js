@@ -22,6 +22,16 @@ $(document).ready(function() {
     slide.addClass(slideClass);
   }
 
+  /* Navbar-brand */
+  $(window).scroll(function() {
+    if (!$('.navbar-brand').hasClass('transition')) {
+      $('.navbar-brand').addClass('transition');
+    }
+  });
+    
+
+
+
   // Scroll spy
   $('body').scrollspy({ target: '.navbar-main-menu' });
 
@@ -42,14 +52,69 @@ $(document).ready(function() {
   });
 
   // Scroll animate
-  $('.region').viewportChecker({
+  $('.region-title').viewportChecker({
     classToAdd: 'sc-visible animated fadeInDown',
     offset: 100    
   });
 
-  $('.footer').viewportChecker({
-    classToAdd: 'sc-visible animated slideInUp',
+  $('.item-advantages.left .item-wrapper').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInLeft',
+    offset: 100    
+  });
+
+  $('.region .region-description').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInDown',
+    offset: 100    
+  });
+
+  $('.region .btn-primary').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInUpBtn',
+    offset: 100    
+  });  
+
+  $('.region-gallery .row').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInLeft',
+    offset: 200    
+  }); 
+
+  $('.region-review .row, .region-contacts .row').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInDown',
+    offset: 100,   
+  });
+
+  $('.region .form-control').viewportChecker({
+    classToAdd: 'sc-visible animated slideInLeftForm',
+    offset: 100    
+  });
+
+  $('.region-services .row').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInDown',
+    offset: 100    
+  });
+
+  $('.item-advantages.right .item-wrapper').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInRight',
+    offset: 100    
+  });
+
+  $('.footer .item-left').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInLeft',
     offset: 0    
+  }); 
+
+  $('.footer .item-right').viewportChecker({
+    classToAdd: 'sc-visible animated fadeInRight',
+    offset: 0   
+  }); 
+
+  $('.header-content').viewportChecker({
+    classToAdd: 'sc-visible animated fadeIn',
+    offset: 0   
+  }); 
+
+  $('.navbar').viewportChecker({
+    classToAdd: 'sc-visible animated slideInDown',
+    offset: 0   
   }); 
 
   /* Gallery */
@@ -64,5 +129,11 @@ $(document).ready(function() {
   /* Parallax */
   $('.region-form').parallax('50%', 0.1);
 
+  /* Arrow down */
+  $('.arrow-down').click(function(event) {
+    var dest = $('#services').offset().top - 50;
+
+    $('html,body').animate({ scrollTop: dest}, 800, 'easeOutCirc');
+  });
 
 });

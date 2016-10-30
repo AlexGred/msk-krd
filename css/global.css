@@ -2378,6 +2378,12 @@ button {
   background: #ffd83b;
   color: #212121;
 }
+.transition {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
 .form-control {
   height: 40px;
   font-size: 16px;
@@ -2544,10 +2550,6 @@ button {
 }
 .navbar .navbar-brand {
   margin: 5px;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
   position: absolute;
 }
 .navbar.affix-top {
@@ -2587,6 +2589,9 @@ button {
   font-weight: 100;
 }
 /* Region review */
+.region-review {
+  overflow: hidden;
+}
 .region-review .item-review {
   overflow: hidden;
   display: table;
@@ -2740,6 +2745,7 @@ button {
 /* Footer */
 footer {
   padding: 10px;
+  overflow: hidden;
 }
 footer .copyright {
   line-height: 32px;
@@ -2789,9 +2795,30 @@ header {
 header.header > .container {
   position: static;
 }
+header .arrow-down {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #ffffff;
+  z-index: 30;
+  cursor: pointer;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 50px;
+  width: 36px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 30%;
+}
 header .header-content {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 100%;
   height: auto;

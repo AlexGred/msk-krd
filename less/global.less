@@ -94,6 +94,9 @@ button {
     color: @c-btn-text;
   }
 }
+.transition {
+  .transition(all .2s);
+}
 .form-control {
   height: 40px;
   font-size: 16px;
@@ -268,7 +271,6 @@ button {
 
   .navbar-brand {
     margin: 5px;
-    .transition(all .2s);
     position: absolute;
   }
   
@@ -319,6 +321,7 @@ button {
 
 /* Region review */
 .region-review {
+  overflow: hidden;
 
   .item-review {
     overflow: hidden;
@@ -362,6 +365,13 @@ button {
 .region-form {
   background: @url-form no-repeat center bottom;
   background-size: cover;
+
+  // .btn {
+  //   position: relative;
+  //   z-index: 6;
+  //   display: block;
+  //   margin: auto;
+  // }
 
   .form-title {
     font-size: 30px;
@@ -498,6 +508,7 @@ button {
 /* Footer */
 footer {
   padding: 10px;
+  overflow: hidden;
 
   .copyright {
     line-height: @height_copyright_content;
@@ -548,9 +559,26 @@ header {
     position: static;
   }
 
+  .arrow-down {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    .transform(translateY(-50%));
+    color: @c-white;
+    z-index: 30;
+    cursor: pointer;
+    font-size: 34px;
+    display: inline-block;
+    line-height: 50px;
+    .size(36px, 50px);
+    text-align: center;
+    border: 1px solid @c-white;
+    border-radius: 30%;
+  }
+
   .header-content {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     .size(100%);
     max-width: 1000px;
