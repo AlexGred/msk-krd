@@ -124,7 +124,11 @@ $(document).ready(function() {
     autoplaySpeed: 15000
   });
 
-  $('a.cbox-item').colorbox();
+  $('a.cbox-item').colorbox({
+    scrolling: false,
+    maxWidth: '100%',
+    maxHeight: '100%'
+  });
 
   /* Parallax */
   $('.region-form').parallax('50%', 0.1);
