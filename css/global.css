@@ -2791,6 +2791,7 @@ header {
   background: url('../img/bg-video.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 header.header > .container {
   position: static;
