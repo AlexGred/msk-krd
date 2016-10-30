@@ -76,7 +76,7 @@ $(document).ready(function() {
 
   $('.region-gallery .row').viewportChecker({
     classToAdd: 'sc-visible animated fadeInLeft',
-    offset: 200    
+    offset: 100    
   }); 
 
   $('.region-review .row, .region-contacts .row').viewportChecker({
