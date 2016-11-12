@@ -2871,7 +2871,8 @@ header .header-content .page-title {
 }
 header .header-content .video-descrition {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 24px;
+  margin-top: 20px;
   line-height: 1;
   font-weight: 500;
 }
