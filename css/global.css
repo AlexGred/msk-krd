@@ -2594,27 +2594,78 @@ button {
   height: 40px;
   background-size: contain;
 }
-/* Region services */
-.region-services .item-services {
-  margin-bottom: 40px;
+/* Region about */
+.region-about .about-wrapper {
+  width: 90%;
+  height: auto;
 }
-@media (min-width: 1200px) {
-  .region-services .item-services {
-    width: 92%;
-    height: auto;
-    margin: auto;
-  }
+.region-about .row.last {
+  margin-top: 30px;
 }
-.region-services .item-services .item-icon {
-  color: #82533b;
-  font-size: 46px;
-  margin-bottom: 10px;
+.region-about .col-about {
+  position: relative;
 }
-.region-services .item-services .item-description {
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Amazing Grotesk Ultra';
+.region-about .col-about:hover .item-about {
+  width: 60%;
+  height: 60%;
+}
+.region-about .col-about:hover .item-about .item-description {
+  opacity: 1;
+}
+.region-about .col-about .item-about {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+  height: 25%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+  background: #bfbfbf;
+  border-right: 15px solid #ffffff;
+  border-bottom: 15px solid #ffffff;
+}
+.region-about .col-about .item-about.top-left {
+  top: 0px;
+  left: 0px;
+  border-right: 15px solid #ffffff;
+  border-bottom: 15px solid #ffffff;
+}
+.region-about .col-about .item-about.top-right {
+  top: 0px;
+  right: 0px;
+  left: auto;
+  border-right: 0;
+  border-left: 15px solid #ffffff;
+  border-bottom: 15px solid #ffffff;
+}
+.region-about .col-about .item-about.bottom-right {
+  top: auto;
+  bottom: 0;
+  left: 0px;
+  left: auto;
+  border-bottom: 0;
+  border-right: 15px solid #ffffff;
+  border-top: 15px solid #ffffff;
+}
+.region-about .col-about .item-about.bottom-left {
+  top: auto;
+  bottom: 0;
+  right: 0px;
+  left: auto;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 15px solid #ffffff;
+  border-top: 15px solid #ffffff;
+}
+.region-about .col-about .item-about .item-description {
+  opacity: 0;
+  -webkit-transition: all 0.2s 0.2s;
+  -moz-transition: all 0.2s 0.2s;
+  -o-transition: all 0.2s 0.2s;
+  transition: all 0.2s 0.2s;
 }
 /* Region review */
 .region-review {

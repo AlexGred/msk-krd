@@ -89,7 +89,7 @@ $(document).ready(function() {
     offset: 100    
   });
 
-  $('.region-services .row').viewportChecker({
+  $('.region-about .row').viewportChecker({
     classToAdd: 'sc-visible animated fadeInDown',
     offset: 100    
   });
