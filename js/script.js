@@ -125,9 +125,36 @@ $(document).ready(function() {
   });
 
   $('a.cbox-item').colorbox({
+    inline: true,
     scrolling: false,
-    maxWidth: '100%',
-    maxHeight: '100%'
+    maxWidth: '80%',
+    maxHeight: '80%',
+    onComplete: function() {
+      var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+      var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+      $(gallery).slick({
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: false,
+        speed: 1000,
+        fade: true,
+        asNavFor: nav
+      });
+      $(nav).slick({
+        asNavFor: gallery,
+        slidesToShow: 3,
+        focusOnSelect: true
+      });
+      $.colorbox.resize();
+    },
+    onClosed: function() {
+      var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+      var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+      $(gallery).slick('unslick');
+      $(nav).slick('unslick');
+    }
   });
 
   /* Parallax */

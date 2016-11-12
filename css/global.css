@@ -3088,4 +3088,7 @@ header .header-content .video-descrition {
   height: auto;
   margin: auto;
 }
+#colorbox .gallery-collapse-wrapper {
+  display: block !important;
+}
 /*# sourceMappingURL=global.css.map */
