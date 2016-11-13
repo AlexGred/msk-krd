@@ -79,7 +79,7 @@ $(document).ready(function() {
     offset: 100    
   }); 
 
-  $('.region-review .row, .region-contacts .row').viewportChecker({
+  $('.region-review .row, .region-contacts .row, .region-how .row').viewportChecker({
     classToAdd: 'sc-visible animated fadeInDown',
     offset: 100,   
   });

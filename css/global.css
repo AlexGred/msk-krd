@@ -2305,7 +2305,7 @@
 }
 /* Basic */
 body {
-  font-family: 'Amazing Grotesk';
+  font-family: 'Open Sans', sans-serif;
 }
 a {
   color: #323232;
@@ -2426,6 +2426,7 @@ button {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Amazing Grotesk';
   margin-bottom: 40px;
 }
 @media (min-width: 768px) {
@@ -2937,6 +2938,7 @@ header .header-content .video-descrition {
   margin-top: 20px;
   line-height: 1;
   font-weight: 500;
+  font-family: 'Amazing Grotesk';
 }
 /* Region gallery */
 .region-gallery .region-title.gallery-title {
@@ -3112,7 +3114,7 @@ header .header-content .video-descrition {
   font-weight: 100;
 }
 .modal .modal-content .modal-body .form-contacts .form-title {
-  font-size: 30px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 .modal .modal-content .modal-body .form-contacts .form-control {
