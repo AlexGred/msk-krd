@@ -295,7 +295,6 @@ p {
 
   .title-block {
     opacity: 0;
-    // visibility: hidden;
     .transition(opacity 0.3s);
     color: @c-white;
     position: absolute;
@@ -331,7 +330,7 @@ p {
 
     .navbar-brand {
       background: url('/img/logo.png') no-repeat center center;
-      .size(280px, 120px);
+      .size(240px, 100px);
       background-size: contain;
     }
   }
@@ -358,7 +357,6 @@ p {
 
     .title-block {
       opacity: 1;
-      // visibility: visible;
     }
   }
 }
@@ -573,9 +571,9 @@ p {
   overflow: hidden;
 
   .item-advantages {
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: left;
-    .size(100%, 310px);
+    .size(100%, 280px);
 
     &.left {
 
@@ -610,6 +608,7 @@ p {
         .item-title {
           font-weight: 500;
           font-size: 20px;
+          margin-bottom: 5px;
         }
 
         .item-description {
@@ -719,7 +718,7 @@ header {
 
   .header-content {
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     .size(100%);
     max-width: 1000px;
@@ -728,16 +727,20 @@ header {
     z-index: 6;
 
     .page-title {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .video-descrition {
       color: @c-white;
       font-size: 24px;
-      margin-top: 20px;
       line-height: 1;
       font-weight: 500;
       font-family: @font_grotesk;
+      margin-bottom: 20px
+    }
+
+    .video-descrition-bottom {
+      margin-top: 20px;
     }
   }
 }
