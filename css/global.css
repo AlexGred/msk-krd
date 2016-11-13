@@ -2537,11 +2537,11 @@ p {
 }
 .navbar .navbar-main-menu {
   float: right;
-  margin-right: 40px;
+  margin-right: 30px;
 }
 .navbar .navbar-nav li > a {
   color: #ffffff;
-  padding: 5px 15px;
+  padding: 5px 10px;
   margin: 9px 0;
   background: none;
   border-radius: 5px;
@@ -2558,7 +2558,7 @@ p {
   background: #ffffff;
 }
 .navbar .navbar-nav li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .navbar .navbar-nav li.active a {
   border: 1px solid #ffffff;
@@ -2571,9 +2571,39 @@ p {
 .navbar .navbar-nav li.active a:focus {
   background: #ffffff;
 }
+.navbar .title-block {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  color: #ffffff;
+  position: absolute;
+  width: auto;
+  height: 50px;
+  line-height: 1;
+  font-size: 21px;
+  text-transform: uppercase;
+  top: 12px;
+  font-family: 'Amazing Grotesk Ultra';
+}
+.navbar .title-block .litle-letter {
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 4px;
+}
 .navbar .navbar-brand {
   margin: 5px;
   position: absolute;
+  left: 50%;
+  top: 100px;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .navbar.affix-top {
   background: none;
@@ -2583,8 +2613,8 @@ p {
 }
 .navbar.affix-top .navbar-brand {
   background: url('/img/logo.png') no-repeat center center;
-  width: 240px;
-  height: 100px;
+  width: 280px;
+  height: 120px;
   background-size: contain;
 }
 .navbar.affix {
@@ -2597,6 +2627,23 @@ p {
   width: 96px;
   height: 40px;
   background-size: contain;
+  top: 5px;
+  left: 120px;
+}
+@media (min-width: 1200px) {
+  .navbar.affix .navbar-brand {
+    background: url('/img/logo-wide.png') no-repeat center center;
+    background-size: contain;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.navbar.affix .title-block {
+  opacity: 1;
 }
 /* Region about */
 .region-about .about-wrapper {
