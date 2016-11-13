@@ -337,7 +337,7 @@ button {
     &:hover {
 
       .item-about {
-        .size(60%, 60%);
+        .size(75%, 65%);
 
         .item-description {
           opacity: 1;
@@ -355,6 +355,18 @@ button {
       background: @bg-about-item;
       border-right: 15px solid @c-white;
       border-bottom: 15px solid @c-white;
+      padding: 20px;
+      line-height: 1.1;
+
+      .item-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-top: 5px;
+        border-bottom: 1px solid @c-black;
+        margin-bottom: 15px;
+      }
 
       &.top-left {
         top: 0px;
@@ -889,11 +901,6 @@ header {
 
     }
   }
-}
-
-
-#colorbox .gallery-collapse-wrapper {
-  display: block !important;
 }
 
 

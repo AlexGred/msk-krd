@@ -2606,8 +2606,8 @@ button {
   position: relative;
 }
 .region-about .col-about:hover .item-about {
-  width: 60%;
-  height: 60%;
+  width: 75%;
+  height: 65%;
 }
 .region-about .col-about:hover .item-about .item-description {
   opacity: 1;
@@ -2626,6 +2626,17 @@ button {
   background: #bfbfbf;
   border-right: 15px solid #ffffff;
   border-bottom: 15px solid #ffffff;
+  padding: 20px;
+  line-height: 1.1;
+}
+.region-about .col-about .item-about .item-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  border-bottom: 1px solid #323232;
+  margin-bottom: 15px;
 }
 .region-about .col-about .item-about.top-left {
   top: 0px;
@@ -3138,8 +3149,5 @@ header .header-content .video-descrition {
   width: 70%;
   height: auto;
   margin: auto;
-}
-#colorbox .gallery-collapse-wrapper {
-  display: block !important;
 }
 /*# sourceMappingURL=global.css.map */
