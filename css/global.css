@@ -2335,6 +2335,9 @@ img {
 button {
   outline: 0;
 }
+p {
+  margin-bottom: 20px;
+}
 /* Advanced */
 .flex {
   display: flex;
@@ -2599,6 +2602,9 @@ button {
 .region-about .about-wrapper {
   width: 90%;
   height: auto;
+}
+.region-about .about-description {
+  line-height: 1.2;
 }
 .region-about .row.last {
   margin-top: 30px;
