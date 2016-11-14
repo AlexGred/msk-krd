@@ -35,7 +35,7 @@ h1 {
 
   &.title {
     color: @c-white;
-    font-size: 30px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: @font_grotesk_ultra;
@@ -59,7 +59,10 @@ p {
 
 /* Advanced */
 .flex {
-  display: flex;
+
+  @media @tablet {
+    display: flex;
+  }
 }
 .ultra {
   font-family: @font_grotesk_ultra;
@@ -403,7 +406,12 @@ p {
       .size(96px, 40px);
       background-size: contain;
       top: 5px;
-      left: 120px;
+      left: 5px;
+      .transform(translateX(0));
+
+      @media @tablet {
+        left: 80px;
+      }
 
       @media @wide {
         background: url('/img/logo-wide.png') no-repeat center center;
@@ -589,6 +597,22 @@ p {
       margin-bottom: 30px;
       font-size: 22px;
 
+      .text-phone {
+        text-align: center;
+
+        @media @tablet {
+          text-align: right;
+        }
+      }
+
+      .text-mail {
+        text-align: center;
+
+        @media @tablet {
+          text-align: left;
+        }
+      }
+
       a {
         color: @c-form;
         text-decoration: none;
@@ -636,21 +660,31 @@ p {
     &.left {
 
       .item-wrapper {
-        float: right;
+
+        @media @tablet {
+          float: right;
+        } 
       }
     }
 
     &.right {
 
       .item-wrapper {
-        float: left;
+
+        @media @tablet {
+          float: left;
+        } 
       }
     }
 
     .item-wrapper {
-      .size(90%);
+      .size(100%);
       margin: auto;
       text-align: center;
+
+      @media @tablet {
+        .size(90%);
+      }
 
       .item-icon {
         font-size: 80px;
@@ -663,9 +697,13 @@ p {
         margin: auto;
         line-height: 1.2;
 
+        @media @tablet-to-desctop {
+          .size(320px);
+        }
+
         .item-title {
           font-weight: 500;
-          font-size: 20px;
+          font-size: 22px;
           margin-bottom: 5px;
         }
 
@@ -781,8 +819,12 @@ header {
     .size(100%);
     max-width: 1000px;
     .transform(translateY(-50%) translateX(-50%));
-    padding: 0 50px;
+    padding: 0;
     z-index: 6;
+
+    @media @tablet {
+      padding: 0 50px;
+    }
 
     .page-title {
       margin-bottom: 20px;
