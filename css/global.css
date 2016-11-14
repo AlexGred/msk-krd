@@ -2495,6 +2495,67 @@ p {
   box-sizing: content-box;
 }
 #colorbox #cboxContent #cboxLoadedContent {
+  position: relative;
+}
+#colorbox #cboxContent .gallery-collapse {
+  width: 85%;
+  height: auto;
+  float: left;
+}
+#colorbox #cboxContent .gallery-collapse .gallery-item .img {
+  border-radius: 5px;
+}
+#colorbox #cboxContent .gallery-collapse .slick-prev {
+  display: none !important;
+}
+#colorbox #cboxContent .gallery-collapse .slick-next {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: none;
+  border: 0;
+  text-indent: -999em;
+}
+#colorbox #cboxContent .gallery-nav {
+  width: 15%;
+  height: auto;
+  box-sizing: border-box;
+  padding-left: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#colorbox #cboxContent .gallery-nav .slick-track {
+  margin: 0;
+}
+#colorbox #cboxContent .gallery-nav .slick-track .slick-slide {
+  margin: 5px 0px;
+  display: inline;
+  float: none;
+  max-width: 100%;
+  cursor: pointer;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 3px;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+#colorbox #cboxContent .gallery-nav .slick-track .slick-slide:hover {
+  -moz-transform: scale(1.04, 1.04);
+  -ms-transform: scale(1.04, 1.04);
+  -webkit-transform: scale(1.04, 1.04);
+  -o-transform: scale(1.04, 1.04);
+  transform: scale(1.04, 1.04);
+}
+#colorbox #cboxContent #cboxLoadedContent {
   margin: 0;
 }
 #colorbox #cboxContent #cboxClose {
@@ -2598,7 +2659,7 @@ p {
   margin: 5px;
   position: absolute;
   left: 50%;
-  top: 100px;
+  top: 20vh;
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
