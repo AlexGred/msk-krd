@@ -274,7 +274,6 @@ p {
   }
 }
 
-
 /* Navigation */
 .navbar {
   border: 0;
@@ -1054,6 +1053,70 @@ header {
   }
 }
 
+/* How we're working region */
+.region-how {
+
+  .how-wrapper {
+    .size(90%);
+    margin: auto;
+
+    .item {
+      text-align: center;
+      padding-top: 70px;
+      position: relative;
+
+      &.first {
+
+        .item-line {
+          width:50%;
+          left: auto;
+          right: 0;
+        }
+      }
+
+      &.last {
+
+        .item-line {
+          width: 50%;
+        }
+      }
+
+      .item-text {
+        line-height: 1.1;
+        font-size: 12px;
+      }
+
+      .item-icon {
+        position: absolute;
+        top: 0;
+        color: @bg-line;
+        font-size: 24px;
+        .size(100%);
+        text-align: center;
+        left: 0;
+      }
+
+      .item-line {
+        // margin-top: 30px;
+        background: @bg-line;
+        .size(100%, 3px);
+        position: absolute;
+        top: 45px;
+        left: 0;
+      }
+
+      .item-circle {
+        .size(10px, 10px);
+        border-radius: 50%;
+        background: @bg-line;
+        position: absolute;
+        top: 41px;
+        left: 50%;
+        .transform(translateX(-50%));
+      }
+    }
+  }
+}
 
 
 
