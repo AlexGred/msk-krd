@@ -12,7 +12,7 @@
   switch ($form) {
     case 'cons-1':
     case 'cons-2':
-      mail('a.dolzhenkov@initlab.ru', 'Заказать бесплатную консультацию', $message_info, "From: MSK Krd info <info@msk-krd.ru>\r\n" . "X-Mailer: PHP/" . phpversion());
+      mail('simonov@msk-krd.ru', 'Заказать бесплатную консультацию', $message_info, "From: MSK Krd info <info@msk-krd.ru>\r\n" . "X-Mailer: PHP/" . phpversion());
 
       if (!empty($email)) {
         $message = "Здравствуйте!\r\n Вы записались на бесплатную консультация. В течении дня мы вам перезвоним.";
@@ -21,7 +21,7 @@
       break;
 
     case 'meet-1':
-      mail('a.dolzhenkov@initlab.ru', 'Запишитесь на встречу', $message_info, "From: MSK Krd info <info@msk-krd.ru>\r\n" . "X-Mailer: PHP/" . phpversion());
+      mail('simonov@msk-krd.ru', 'Запишитесь на встречу', $message_info, "From: MSK Krd info <info@msk-krd.ru>\r\n" . "X-Mailer: PHP/" . phpversion());
 
       if (!empty($email)) {
         $message = "Здравствуйте!\r\n Вы записались на встречу. В течении дня мы вам перезвоним.";
