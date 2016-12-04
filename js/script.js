@@ -1,3 +1,22 @@
+// Viewport
+var viewport = function() {
+  var size;
+  if ($(window).width() < 768) {
+    size = 'xs';
+  }
+  else if ($(window).width() >= 768 &&  $(window).width() <= 992) {
+    size = 'sm';
+  }
+  else if ($(window).width() > 992 &&  $(window).width() <= 1200) {
+    size = 'md';
+  }
+  else  {
+    size = 'lg';
+  }
+
+  return size;
+}
+
 $(document).ready(function() {
   
   // affix
@@ -121,41 +140,86 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 15000
-  });
-
-  $('a.cbox-item').colorbox({
-    inline: true,
-    scrolling: false,
-    maxWidth: '80%',
-    maxHeight: '80%',
-    onComplete: function() {
-      var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
-      var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
-
-      $(gallery).slick({
+    autoplaySpeed: 15000,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
         slidesToShow: 1,
-        infinite: true,
-        autoplay: false,
-        speed: 1000,
-        fade: true,
-        asNavFor: nav
-      });
-      $(nav).slick({
-        asNavFor: gallery,
-        slidesToShow: 3,
-        focusOnSelect: true
-      });
-      $.colorbox.resize();
-    },
-    onClosed: function() {
-      var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
-      var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
-
-      $(gallery).slick('unslick');
-      $(nav).slick('unslick');
+        slidesToScroll: 1
+      }
     }
+  ]
   });
+
+  if (viewport() != 'xs') {
+    $('a.cbox-item').colorbox({
+      inline: true,
+      scrolling: false,
+      maxWidth: '80%',
+      maxHeight: '80%',
+      onComplete: function() {
+        var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+        var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+        $(gallery).slick({
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: false,
+          speed: 1000,
+          fade: true,
+          asNavFor: nav
+        });
+        $(nav).slick({
+          asNavFor: gallery,
+          slidesToShow: 3,
+          focusOnSelect: true
+        });
+        $.colorbox.resize();
+      },
+      onClosed: function() {
+        var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+        var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+        $(gallery).slick('unslick');
+        $(nav).slick('unslick');
+      }
+    });
+  }
+  else {
+    $('a.cbox-item').colorbox({
+      inline: true,
+      scrolling: false,
+      maxWidth: '100%',
+      maxHeight: '100%',
+      onComplete: function() {
+        var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+        var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+        $(gallery).slick({
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: false,
+          speed: 1000,
+          fade: true,
+          asNavFor: nav
+        });
+        $(nav).slick({
+          asNavFor: gallery,
+          slidesToShow: 3,
+          focusOnSelect: true
+        });
+        $.colorbox.resize();
+      },
+      onClosed: function() {
+        var gallery = $.colorbox.element().attr('href') + ' .gallery-collapse';
+        var nav = $.colorbox.element().attr('href') + ' .gallery-nav';
+
+        $(gallery).slick('unslick');
+        $(nav).slick('unslick');
+      }
+    });
+  }
 
   /* Parallax */
   $('.region-form').parallax('50%', 0.1);
@@ -166,5 +230,4 @@ $(document).ready(function() {
 
     $('html,body').animate({ scrollTop: dest}, 800, 'easeOutCirc');
   });
-
 });

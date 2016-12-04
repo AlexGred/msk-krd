@@ -20,7 +20,6 @@
 
 /* Basic */
 body {
-  // font-family: @open_sans;
   font-family: @open_sans;
 }
 a {
@@ -88,7 +87,8 @@ p {
 
   &:active,
   &:focus,
-  &:active:focus {
+  &:active:focus,
+  &:active:hover {
     background: @bg-button-hover;
     border: 0;
     color: @c-btn-text;
@@ -98,15 +98,21 @@ p {
 .btn {
   border: 0;
   outline: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 10px 10px;
   border-radius: 20px;
   background: @bg-button;
   font-family: @open_sans;
   .shadow(@shadow_button);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
   color: @c-btn-text;
+
+  @media @tablet {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+  }
 
   &:active:focus {
     outline: 0;
@@ -138,13 +144,18 @@ p {
   position: relative;
 }
 .region-title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   font-family: @font_grotesk;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   @media @tablet {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media @desctop {
     font-size: 40px;
     margin-bottom: 30px;
   }
@@ -156,25 +167,33 @@ p {
   opacity: 1;
 }
 .region-description {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
-  .size(84%);
+  .size(100%);
   margin: 0 auto 40px;
   text-align: center;
 
-  &.description-underline {
-    padding-bottom: 30px;
-    position: relative;
+  @media @tablet {
+    font-size: 20px;
+    .size(84%);
+  }
 
-    &:before {
-      position: absolute;
-      content: '';
-      display: block;
-      bottom: 0;
-      left: 50%;
-      .transform(translateX(-50%));
-      .size(160px, 2px);
-      background: @bg-desc-line;
+  &.description-underline {
+
+    @media @tablet {
+      padding-bottom: 30px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: 0;
+        left: 50%;
+        .transform(translateX(-50%));
+        .size(160px, 2px);
+        background: @bg-desc-line;
+      }
     }
   }
 }
@@ -256,6 +275,7 @@ p {
           .transition(all 1.5s);
 
           &:hover {
+            border-radius: 3px;
             .transform(scale(1.04, 1.04));
           }
         }
@@ -378,8 +398,12 @@ p {
     margin: 5px;
     position: absolute;
     left: 50%;
-    top: 20vh;
+    top: 80px;
     .transform(translateX(-50%));
+
+    @media @tablet {
+      top: 20vh;
+    }
   }
   
   &.affix-top {
@@ -390,8 +414,12 @@ p {
 
     .navbar-brand {
       background: url('/img/logo.png') no-repeat center center;
-      .size(240px, 100px);
+      .size(200px, 100px);
       background-size: contain;
+
+      @media @tablet {
+        .size(240px, 100px);
+      }
     }
   }
 
@@ -435,6 +463,11 @@ p {
 
   .about-description {
     line-height: 1.2;
+    margin-bottom: 0;
+
+    @media @tablet {
+      margin-bottom: 40px;
+    }
   }
 
   .row.last {
@@ -571,10 +604,14 @@ p {
   background-size: cover;
 
   .form-title {
-    font-size: 30px;
+    font-size: 24px;
     color: @c-white;
 
     @media @tablet {
+      font-size: 30px;
+    }
+
+    @media @desctop {
       font-size: 34px;
     }
   }
@@ -584,6 +621,7 @@ p {
 .region-contacts {
   background: @url-contact no-repeat center center;
   background-size: cover;
+  overflow: hidden;
 
   .text-field {
     color: @c-form;
@@ -593,8 +631,13 @@ p {
     }
 
     .contacts-info {
-      margin-bottom: 30px;
-      font-size: 22px;
+      margin-bottom: 20px;
+      font-size: 18px;
+
+      @media @tablet {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
       .text-phone {
         text-align: center;
@@ -621,8 +664,12 @@ p {
 
     .form-description {
       margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 18px;
       font-family: @open_sans;
+
+      @media @tablet {
+        font-size: 24px;
+      }
     }
   }
 
@@ -650,6 +697,27 @@ p {
 .region-advantages {
   padding-bottom: 0;
   overflow: hidden;
+
+  .row-class:last-child {
+
+    .bg-dark-grey {
+      background: @bg-grey;
+    }
+
+    .bg-grey {
+      background: darken(@bg-grey, 5.5%);
+    }
+
+    @media @tablet {
+      .bg-dark-grey {
+        background: darken(@bg-grey, 5.5%);
+      }
+
+      .bg-grey {
+        background: @bg-grey;
+      }
+    }
+  }
 
   .item-advantages {
     padding: 40px 0;
@@ -692,12 +760,16 @@ p {
       }
 
       .item-text {
-        .size(350px);
+        .size(100%);
         margin: auto;
         line-height: 1.2;
 
         @media @tablet-to-desctop {
           .size(320px);
+        }
+
+        @media @desctop {
+          .size(350px);
         }
 
         .item-title {
@@ -746,6 +818,11 @@ footer {
 
   .copyright {
     line-height: @height_copyright_content;
+    text-align: center;
+
+    @media @tablet {
+      text-align: left;
+    }
   }
 
   .social-networks {
@@ -798,7 +875,7 @@ header {
     position: absolute;
     bottom: 20px;
     left: 50%;
-    .transform(translateY(-50%));
+    margin-left: -13px;
     color: @c-white;
     z-index: 30;
     cursor: pointer;
@@ -831,11 +908,15 @@ header {
 
     .video-descrition {
       color: @c-white;
-      font-size: 24px;
+      font-size: 14px;
       line-height: 1;
       font-weight: 500;
       font-family: @font_grotesk;
-      margin-bottom: 20px
+      margin-bottom: 20px;
+
+      @media @tablet {
+        font-size: 24px;
+      }
     }
 
     .video-descrition-bottom {
@@ -871,13 +952,18 @@ header {
     .slick-prev {
       position: absolute;
       top: 50%;
-      left: -40px;
+      left: 0;
       .transform(translate(-50%));
       margin-top: -50px;
       padding: 0;
       background: none;
       border: 0;
       text-indent: -999em;
+      z-index: 1000;
+
+      @media @tablet {
+        left: -40px;
+      }
 
       &:hover:before {
         color: @c-white;
@@ -905,15 +991,20 @@ header {
     }
 
     .slick-next {
+      z-index: 1000;
       position: absolute;
       top: 50%;
-      right: -5px;
+      right: 35px;
       .transform(translate(-50%));
       margin-top: -50px;
       padding: 0;
       background: none;
       border: 0;
       text-indent: -999em;
+
+      @media @tablet {
+        right: -5px;
+      }
 
       &:hover:before {
         color: @c-white;
@@ -993,22 +1084,35 @@ header {
     background: darken(@bg-grey, 7%);
 
     .modal-body {
-      padding: 30px;
+      padding: 10px;
+
+      @media @tablet {
+        padding: 30px;
+      }
 
       .close {
         position: absolute;
-        right: 10px;
-        top: 0px;
+        right: 8px;
+        top: -7px;
         line-height: 1;
         font-size: 50px;
         font-weight: 100;
+
+        @media @tablet {
+          right: 10px;
+        top: 0px;
+        }
       }
 
       .form-contacts {
 
         .form-title {
-          font-size: 26px;
+          font-size: 22px;
           margin-bottom: 20px;
+
+          @media @tablet {
+            font-size: 26px;
+          }
         }
 
         .form-control {
