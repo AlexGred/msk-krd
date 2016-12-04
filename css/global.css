@@ -3487,4 +3487,22 @@ header .header-content .video-descrition-bottom {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+/* Region alert */
+.region-alert {
+  position: fixed;
+  top: 70px;
+  width: 90%;
+  z-index: 1001;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .region-alert {
+    width: 500px;
+  }
+}
 /*# sourceMappingURL=global.css.map */

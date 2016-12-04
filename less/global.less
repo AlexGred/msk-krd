@@ -1222,5 +1222,18 @@ header {
   }
 }
 
+/* Region alert */
+.region-alert {
+  position: fixed;
+  top: 70px;
+  width: 90%;
+  z-index: 1001;
+  left: 50%;
+  .transform(translateX(-50%));
+
+  @media @tablet {
+    width: 500px;
+  }
+}
 
 

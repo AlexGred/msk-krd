@@ -467,15 +467,15 @@
             Мы свяжемся с вами в течение рабочего дня
           </div>
         </div>
-        <form action="" method="POST" role="form" class="form-contacts center-block">
+        <form action="" id="cons-2" method="POST" role="form" class="form-contacts center-block">
           <div class="form-group name">
-            <input type="text" class="form-control sc-hidden" id="name" placeholder="Имя*" required />
+            <input type="text" class="form-control sc-hidden name" name="name" id="name" placeholder="Имя*" required />
           </div>
           <div class="form-group phone-number">
-            <input type="text" class="form-control sc-hidden" id="phone-number-1" placeholder="Телефон*" required />
+            <input type="text" class="form-control sc-hidden phone" name="phone-number" id="phone-number-1" placeholder="Телефон*" required />
           </div>
           <div class="form-group email">
-            <input type="email" class="form-control sc-hidden" id="email" placeholder="E-mail" />
+            <input type="email" name="email" class="form-control sc-hidden email" id="email" placeholder="E-mail" />
           </div>
 
           <button type="submit" class="btn btn-primary sc-hidden">Заказать бесплатную консультацию</button>
@@ -511,19 +511,19 @@
         <div class="modal-content">
           <div class="modal-body text-center">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <form action="" method="POST" role="form" class="form-contacts center-block">
+            <form action="" name="cons" method="POST" role="form" class="form-contacts center-block" id="cons-1">
               <div class="text-field">
                 <h3 class="form-title region-title">Заказать бесплатную консультацию</h3>
                 <div class="form-description">Мы свяжемся с вами в течение рабочего дня</div>
               </div>
               <div class="form-group name">
-                <input type="text" class="form-control" id="name" placeholder="Имя*" required />
+                <input type="text" class="form-control name" name="name" id="name" placeholder="Имя*" required />
               </div>
               <div class="form-group phone-number">
-                <input type="text" class="form-control" id="phone-number" placeholder="Телефон*" required />
+                <input type="text" class="form-control phone" name="phone-number" id="phone-number" placeholder="Телефон*" required />
               </div>
               <div class="form-group email">
-                <input type="email" class="form-control" id="email" placeholder="E-mail" />
+                <input type="email" class="form-control email" name="email" id="email" placeholder="E-mail" />
               </div>
 
               <button type="submit" class="btn btn-primary">Заказать бесплатную консультацию</button>
@@ -538,19 +538,19 @@
         <div class="modal-content">
           <div class="modal-body text-center">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <form action="" method="POST" role="form" class="form-contacts center-block">
+            <form action="" method="POST" role="form" class="form-contacts center-block" id="meet-1">
               <div class="text-field">
                 <h3 class="form-title region-title">Запишитесь на встречу</h3>
                 <div class="form-description">Мы свяжемся с вами в течение рабочего дня</div>
               </div>
               <div class="form-group name">
-                <input type="text" class="form-control" id="name" placeholder="Имя*" required />
+                <input type="text" class="form-control name" name="name" id="name" placeholder="Имя*" required />
               </div>
               <div class="form-group phone-number">
-                <input type="text" class="form-control" id="phone-number" placeholder="Телефон*" required />
+                <input type="text" class="form-control phone" name="phone-number" id="phone-number-2" placeholder="Телефон*" required />
               </div>
               <div class="form-group email">
-                <input type="email" class="form-control" id="email" placeholder="E-mail" />
+                <input type="email" class="form-control email" name="email" id="email" placeholder="E-mail" />
               </div>
 
               <button type="submit" class="btn btn-primary">Запишитесь на встречу</button>
@@ -559,6 +559,10 @@
         </div>
       </div>
     </div>
+
+    <div class="region-alert">
+    </div>
+
 
     <div class="gallery-collapse-wrapper hidden">
       <div class="gallery-collapse-1">
